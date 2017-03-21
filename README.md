@@ -24,7 +24,7 @@ Produces the following output:
 
 To view JSON results plan call static `NMyVision.JsonVisualizer.DumpJson(item)` method or
 call `DumpJson` extension method on any object instance. You will also need to add `NMyVision.LinqPad.JsonVisualizer` 
-to namespaces list (click F4 to open the dialog). If you want to name the window pass a title as a second parameter.
+to namespaces list (use F4 to open the dialog). If you want to name the window pass a title as a second parameter.
 
 JSON visualizer with a more complex output:
 ![missing indexes](screenshots/linqpadvisualizer.gif "Json Visualizer")

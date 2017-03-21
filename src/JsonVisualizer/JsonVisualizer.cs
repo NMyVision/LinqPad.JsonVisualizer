@@ -88,7 +88,7 @@ namespace NMyVision.LinqPad
                     parent.Nodes.Add(childNode);
                     if (item is JValue jv)
                     {
-                        childNode.Text = GetValue(jv);
+                        childNode.Text = $"{i} : { GetValue(jv) }";
                     }
                     else
                     {

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>NMyVision.LinqPad.JsonVisualizer</id>
+        <version>1.0.0</version>
+        <authors>Matthew  Gambill</authors>
+        <owners>NMyVision</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>LinqPad Json Dump Visualizer</description>
+        <dependencies>
+            <dependency id="Newtonsoft.Json" version="9.0.1" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin\Release\NMyVision.LinqPad.JsonVisualizer.dll" target="lib\NMyVision.LinqPad.JsonVisualizer.dll" />
+        <file src="bin\Release\NMyVision.LinqPad.JsonVisualizer.pdb" target="lib\NMyVision.LinqPad.JsonVisualizer.pdb" />
+    </files>
+</package>

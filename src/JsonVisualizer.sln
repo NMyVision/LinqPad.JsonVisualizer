@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BA0B9EC0-A58B-4698-A02D-CA101C39EFEE}"
 	ProjectSection(SolutionItems) = preProject
 		..\screenshots\linqpadvisualizer.gif = ..\screenshots\linqpadvisualizer.gif
+		NMyVision.LinqPad.JsonVisualizer.nuspec = NMyVision.LinqPad.JsonVisualizer.nuspec
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject

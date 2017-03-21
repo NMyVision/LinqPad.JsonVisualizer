@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>NMyVision.LinqPad.JsonVisualizer</id>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
         <authors>M. Gambill</authors>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>JSON Visualizer for LinqPad</description>

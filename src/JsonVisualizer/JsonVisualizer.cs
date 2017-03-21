@@ -18,7 +18,7 @@ namespace NMyVision.LinqPad
         /// <param name="value">Object to be dumpped.</param>
         /// <param name="title">Title for the panel, defaults to 'JSON'.</param>
         /// <returns></returns>
-        public static T DumpJson<T>(this T value, string title = "JSON") 
+        public static T DumpJson<T>(this T value, string title = "JSON")
         {
             string json = "";
             if (value is string)
@@ -38,7 +38,7 @@ namespace NMyVision.LinqPad
 
             try
             {
-                var tNode = new TreeNode( prefix );
+                var tNode = new TreeNode(prefix);
 
                 AddNode(root, tNode);
 
@@ -62,9 +62,8 @@ namespace NMyVision.LinqPad
                 return;
             if (token is JValue)
             { }
-            else if (token is JObject)
+            else if (token is JObject obj)
             {
-                var obj = (JObject)token;
                 foreach (var property in obj.Properties())
                 {
                     var childNode = parent.Nodes[parent.Nodes.Add(new TreeNode($"{property.Name} : "))];
@@ -73,26 +72,45 @@ namespace NMyVision.LinqPad
                         childNode.Text += "[]";
                     else if (property.Value is JObject)
                         childNode.Text += "{}";
-                    else
-                        childNode.Text += property.Value.ToString();
+                    else if (property.Value is JValue)
+                        childNode.Text += GetValue(property.Value as JValue);
+
                     childNode.ToolTipText = token.ToString();
                     AddNode(property.Value, childNode);
                 }
             }
-            else if (token is JArray)
+            else if (token is JArray array)
             {
-                var array = (JArray)token;
                 for (int i = 0; i < array.Count; i++)
                 {
+                    var item = array[i];
                     var childNode = new TreeNode($"{i} : {{}}");
                     parent.Nodes.Add(childNode);
-                    AddNode(array[i], childNode);
+                    if (item is JValue jv)
+                    {
+                        childNode.Text = GetValue(jv);
+                    }
+                    else
+                    {
+                        AddNode(item, childNode);
+                    }
                 }
             }
             else
             {
                 //Debug.WriteLine(string.Format("{0} not implemented", token.Type)); // JConstructor, JRaw
             }
+        }
+    
+
+        private static string GetValue(JValue item)
+        {
+            if (item.Value == null) return "NULL";
+
+            return (item.Value is String) ?
+                $"\"{ item.Value.ToString() }\"" :
+                item.Value.ToString();
+
         }
     }
 }

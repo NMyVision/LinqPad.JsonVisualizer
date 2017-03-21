@@ -1,9 +1,5 @@
-# NMyVision.LinqPad.JsonVisualizer
+# Json Visualizer for LINQPad
 
-Json Visualizer for LINQPad
-
-
-## Viewing JSON
 
 Dump results to a JSON tree with collapse and expand features.
 
@@ -20,6 +16,9 @@ var x = new
 
 x.DumpJson();
 ```
+
+Produces the following output:
+
 ![LinqPad Results](screenshots/linqpadvisualizer-results.gif "Json Visualizer Results")
 
 

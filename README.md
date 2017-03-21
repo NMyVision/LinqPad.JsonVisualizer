@@ -1,11 +1,31 @@
 # NMyVision.LinqPad.JsonVisualizer
-Json Visualizer for LINQPad
 
-Dump results to a JSON tree with collapse and expand features
+Json Visualizer for LINQPad
 
 
 ## Viewing JSON
-To view JSON results plan or missing indexes call static `QueryPlanVisualizer.JsonVisualizer.DumpPlan(query)` method or call `DumpJSON` extension method on any object instance. You will also need to add `NMyVision.JsonVisualizer` to namespaces list (click F4 to open the dialog). If you want to name the window pass a title as a second parameter.
 
-Json visualizer:
+Dump results to a JSON tree with collapse and expand features.
+
+```csharp
+var x = new
+{
+	name = new
+	{
+		firstname = "John",
+		lastname = "Doe"
+	},
+	age = 55
+};
+
+x.DumpJson();
+```
+![LinqPad Results](screenshots/linqpadvisualizer-results.gif "Json Visualizer Results")
+
+
+To view JSON results plan call static `NMyVision.JsonVisualizer.DumpJson(item)` method or
+call `DumpJson` extension method on any object instance. You will also need to add `NMyVision.LinqPad.JsonVisualizer` 
+to namespaces list (click F4 to open the dialog). If you want to name the window pass a title as a second parameter.
+
+JSON visualizer with a more complex output:
 ![missing indexes](screenshots/linqpadvisualizer.gif "Json Visualizer")

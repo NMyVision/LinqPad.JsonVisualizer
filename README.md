@@ -1,17 +1,23 @@
 # Json Visualizer for LINQPad
 
+## Install
+via [NuGet](https://www.nuget.org/packages/NMyVision.LinqPad.JsonVisualizer):
+```
+PM> NMyVision.LinqPad.JsonVisualizer
+```
 
+## Usage
 Dump results to a JSON tree with collapse and expand features.
 
 ```csharp
 var x = new
 {
-	name = new
-	{
-		firstname = "John",
-		lastname = "Doe"
-	},
-	age = 55
+  name = new
+  {
+    firstname = "John",
+    lastname = "Doe"
+  },
+  age = 55
 };
 
 x.DumpJson();
@@ -28,3 +34,6 @@ to namespaces list (use F4 to open the dialog). If you want to name the window p
 
 JSON visualizer with a more complex output:
 ![missing indexes](screenshots/linqpadvisualizer.gif "Json Visualizer")
+
+## License
+[MIT](LICENSE)

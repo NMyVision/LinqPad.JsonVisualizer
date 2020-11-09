@@ -6,6 +6,8 @@ via [NuGet](https://www.nuget.org/packages/NMyVision.LinqPad.JsonVisualizer):
 PM> NMyVision.LinqPad.JsonVisualizer
 ```
 
+Legacy version is now in `Framework` Branch
+
 ## Usage
 Dump results to a JSON tree with collapse and expand features.
 

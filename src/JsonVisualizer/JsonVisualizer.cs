@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using LINQPad;
-using System.Windows.Forms;
+﻿using LINQPad;
 using Newtonsoft.Json.Linq;
+using System;
+using System.Windows.Forms;
 
 namespace NMyVision.LinqPad
 {
@@ -51,18 +47,20 @@ namespace NMyVision.LinqPad
                 tv.EndUpdate();
             }
 
-            PanelManager.DisplayControl(tv, title);
-
+#if NETCORE
+            tv.Dump(title);
+#else
+            LINQPad.PanelManager.DisplayControl(tv, title);            
+#endif
             return value;
         }
 
         private static void AddNode(JToken token, TreeNode parent)
         {
-            if (token == null)
+            if (token == null || token is JValue)
                 return;
-            if (token is JValue)
-            { }
-            else if (token is JObject obj)
+            
+            if (token is JObject obj)
             {
                 foreach (var property in obj.Properties())
                 {
@@ -101,7 +99,7 @@ namespace NMyVision.LinqPad
                 //Debug.WriteLine(string.Format("{0} not implemented", token.Type)); // JConstructor, JRaw
             }
         }
-    
+
 
         private static string GetValue(JValue item)
         {

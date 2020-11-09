@@ -6,6 +6,8 @@ via [NuGet](https://www.nuget.org/packages/NMyVision.LinqPad.JsonVisualizer):
 PM> NMyVision.LinqPad.JsonVisualizer
 ```
 
+Supports both LinqPad 5 and LinqPad 6
+
 ## Usage
 Dump results to a JSON tree with collapse and expand features.
 

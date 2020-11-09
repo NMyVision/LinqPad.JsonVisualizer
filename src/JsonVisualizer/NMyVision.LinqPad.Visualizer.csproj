@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+	<PropertyGroup>
+		<TargetFrameworks>netcoreapp3.0;net46</TargetFrameworks>		
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<UseWindowsForms>true</UseWindowsForms>
+		
+		<AssemblyName>NMyVision.LinqPad.Visualizer</AssemblyName>
+		<RootNamespace>NMyVision.LinqPad.Visualizer</RootNamespace>
+		
+		<Company>NMyVision</Company>
+		<Version>2.0.0</Version>
+		<Authors>M. Gambill</Authors>
+		<Description>JSON Visualizer for LinqPad</Description>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(TargetFramework)' == 'netcoreapp3.0'">
+		<DefineConstants>NETCORE</DefineConstants>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="LINQPad.Reference" Version="1.*" />
+		<PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net46'">
+	</ItemGroup>
+
+</Project>

@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NMyVision.LinqPad.Visualizer", "JsonVisualizer\NMyVision.LinqPad.Visualizer.csproj", "{0CA57997-B49A-4044-83F0-AE0313AB81CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NMyVision.LinqPad.JsonVisualizer", "JsonVisualizer\NMyVision.LinqPad.JsonVisualizer.csproj", "{0CA57997-B49A-4044-83F0-AE0313AB81CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
